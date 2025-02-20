@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'bootstrap.html' %}
+    <title>AI World</title>
+
+    <!-- <style>
+        h1 {
+            font-size: 40px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: normal;
+            color: rosybrown;
+            text-align: center;
+        }
+
+        #aiworld{
+            width: 95%;
+            height: 760px;
+            object-fit: fill;
+        }
+
+        h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+            color: rosybrown;
+            text-align: center;
+        }
+
+        .bodytext{
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        #container{
+            max-width: 820px;
+            margin: 0 auto ;
+        }
+    </style> -->
+</head>
+<body>
+{% include 'nav.html' %}
+    <div class="container">
+        <h1 class="text-center mt-2 mb-4">AI World is coming</h1>
+        {% include 'banner.html' %}
+        <h2 class="text-center mt-2 mb-4">
+            About AI
+        </h2>
+        <p class="lead">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+        </p>
+        <h2 class="text-center mt-2 mb-4">Job Openings</h2>
+
+        <div>
+            {% for job in jobs %}
+
+                {% include 'jobitem.html' %}
+
+            {% endfor %}
+        </div>
+
+        <p class="text-center">Details of AI jobs</p>
+        <div class="text-center ">
+            <a href="mailto:vinodsagar0981@gmail.com" type="button" class="btn btn-outline-primary float-right align-middle">Contact</a>
+        </div>
+        
+        
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

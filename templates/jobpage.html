@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'bootstrap.html' %}
+    <title>{{job.title}} - AI World</title>
+</head>
+<body>
+    <div class="container">
+        {% include 'nav.html' %}
+        {% include 'banner.html' %}
+        <h2 class="text-center">AI Career</h2>
+        <h3>Title</h3>
+        <p>{{job.title}}</p>
+        <h3>Location</h3>
+        <p>{{job.location}}</p>
+        <h3>Salary</h3>
+        <p>{{job.currency}}{{job.salary}}</p>
+        <h3>Responsibilities</h3>
+        <ul>
+            {% for line in job.responsibilities.split("/n") %}
+                <li>{{line}}</li>
+            {% endfor %}
+        </ul>
+        <h3>Skills</h3>
+        <ol>
+            {% for line in job.skills.split("/n") %}
+                <li>{{line}}</li>
+            {% endfor %}
+        </ol>
+        {% include 'application_form.html' %}
+        {% include 'footer.html' %}
+    </div>
+</body>
+</html>

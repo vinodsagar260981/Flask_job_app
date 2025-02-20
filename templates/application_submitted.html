@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'bootstrap.html' %}
+    <title>Application Submitted</title>
+</head>
+<body>
+    {% include 'nav.html' %}
+    <h1 class="text-center mt-2 mb-4">AI Career</h1>
+
+    <div class="container text-center">
+        {% include 'banner.html' %}
+        <h1>{{application['full_name']}} </h1>
+        <h3>your Application is submitted successfully for role {{job['title']}}!</h3>
+    </div>
+</body>
+</html>
