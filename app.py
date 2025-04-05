@@ -36,9 +36,6 @@ def hello_aiworld():
     jobs = load_jobs_from_db()
     return render_template('home.html', jobs=jobs)
 
-
-
-
 @app.route("/api/jobs")
 def list_jobs():
     jobs = load_jobs_from_db()
